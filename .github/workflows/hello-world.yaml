@@ -13,3 +13,8 @@ on:
         description: "Version to deploy"
         required: true
         type: string
+
+
+jobs:
+  - step:
+    run: echo hello world
