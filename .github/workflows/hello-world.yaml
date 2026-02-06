@@ -16,5 +16,7 @@ on:
 
 
 jobs:
-  - step:
-    run: echo hello world
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo hello world
