@@ -20,7 +20,7 @@ on:
 
 jobs:
   hello:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - run: echo hello '${{github.event.commits[0].author.name}}'
 #      - name: First interaction
