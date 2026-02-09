@@ -20,7 +20,6 @@ on:
 
 jobs:
   hello:
-    runs-on: self-hosted
     steps:
       - name: Print a specific variable
         run: echo hello '${{github.event.commits[0].author.name}}'
