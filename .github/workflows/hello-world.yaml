@@ -22,7 +22,10 @@ jobs:
   hello:
     runs-on: self-hosted
     steps:
-      - run: echo hello '${{github.event.commits[0].author.name}}'
+      - name: Print a specific variable
+        run: echo hello '${{github.event.commits[0].author.name}}'
+      - name: Print all of the github variables
+        run: echo start 'toJSON({{github}})'
 #      - name: First interaction
 #        uses: actions/first-interaction@v1.3.0
 #        with:
