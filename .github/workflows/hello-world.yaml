@@ -26,7 +26,17 @@ jobs:
         run: echo hello '${{github.event.commits[0].author.name}}'
       - name: Print all of the github variables
         run: echo start '${{toJSON(github)}}'
-#      - name: First interaction
+      - name: Print a repository secret
+        run: echo start '${{ secrets.SUPER_SECRET }}'
+      - name: Print an Environment secret
+        run: echo start '${{ secrets.SUPER_SECRET_ENV }}'
+      - name: Print an environment variable
+        run: echo start '${{ vars.PRODUCTION_VAR1 }}'
+      - name: Print a repository variable:
+        run: echo start '${{ vars.REPO_VAR1 }}'
+
+        
+        #      - name: First interaction
 #        uses: actions/first-interaction@v1.3.0
 #        with:
 #          # Token for the repository. Can be passed in using {{ secrets.GITHUB_TOKEN }}
